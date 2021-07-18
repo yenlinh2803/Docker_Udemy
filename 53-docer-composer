@@ -1,0 +1,10 @@
+version: '3'
+services: 
+	redis-server:
+		image: 'redis'
+	node-app:
+		build: .
+		ports:
+			- "8081:8081"
+			# 1st 8081 is the port on local merchine
+			# 2nd 8081 is the port inside the container
